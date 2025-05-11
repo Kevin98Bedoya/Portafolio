@@ -1,0 +1,146 @@
+:root {
+    color-scheme: light dark;
+
+    /* Colores generales */
+    --bg-color: #ffffff;
+    --text-color: #121212;
+    --border-color: #121212;
+
+    /* Cobalto */
+    --cobalt: #2563eb;
+    --cobalt-hover: #1d4ed8;
+    --cobalt-translucent: rgba(37, 99, 235, 0.1);
+    --cobalt-translucent-hover: rgba(37, 99, 235, 0.2);
+
+    /* Botón texto */
+    --btn-text-light: white;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --border-color: #ffffff;
+
+    --cobalt-translucent: rgba(37, 99, 235, 0.2);
+    --cobalt-translucent-hover: rgba(37, 99, 235, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+    font-family: sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.inner-padding {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+}
+
+.content > img {
+    width: 128px;
+    height: 128px;
+    object-fit: cover; /* La imagen llena completamente el contenedor */
+    border-radius: 50%;
+    flex-shrink: 0; /* Evita que la imagen se encoja si hay poco espacio */
+}
+
+.content > div {
+    flex: 1; /* Ocupa el espacio restante */
+    padding-left: 20px;
+}
+
+.switches {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-shrink: 0;
+    min-width: 40px;
+    max-width: 80px;
+}
+
+.switches a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: opacity 0.2s ease;
+}
+
+.switches a:hover {
+    opacity: 0.7;
+}
+
+.switches svg {
+    stroke: var(--text-color);
+    width: 24px;
+    height: 24px;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--cobalt);
+    color: var(--btn-text-light);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+    background-color: var(--cobalt-hover);
+}
+
+.boton svg {
+    stroke: var(--btn-text-light);
+}
+
+.boton2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--cobalt);
+    border-radius: 6px;
+    color: var(--cobalt);
+    background-color: var(--cobalt-translucent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.boton2:hover {
+    background-color: var(--cobalt-translucent-hover);
+}
+
+.boton2 svg {
+    stroke: var(--cobalt);
+}
