@@ -5,12 +5,15 @@
     --bg-color: #ffffff;
     --text-color: #121212;
     --border-color: #121212;
+    --gray: #707070;
+    --gray-translucent-hover: #70707025;
 
     /* Cobalto */
     --cobalt: #2563eb;
     --cobalt-hover: #1d4ed8;
     --cobalt-translucent: rgba(37, 99, 235, 0.1);
     --cobalt-translucent-hover: rgba(37, 99, 235, 0.2);
+    --cobalt-translucent-hover2: #2564eb44;
 
     /* Botón texto */
     --btn-text-light: white;
@@ -23,6 +26,7 @@
 
     --cobalt-translucent: rgba(37, 99, 235, 0.2);
     --cobalt-translucent-hover: rgba(37, 99, 235, 0.3);
+    --cobalt-translucent-hover2: #2564eb3b;
 }
 
 * {
@@ -38,6 +42,11 @@ html, body {
     background-color: var(--bg-color);
 }
 
+.gray {
+    color: gray;
+    font-size: 0.85rem;
+}
+
 .page-wrapper {
     min-height: 100vh;
     background-color: var(--bg-color);
@@ -51,13 +60,17 @@ html, body {
 }
 
 .inner-padding {
+    padding-top: 55px;
     padding-left: 35px;
     padding-right: 35px;
+    padding-bottom: 55px;
+}
+
+.inner-padding > div{
+    padding-top: 2rem;
 }
 
 .content {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     display: flex;
 }
 
@@ -74,14 +87,51 @@ html, body {
     padding-left: 20px;
 }
 
-.switches {
+.content2 > p {
+    line-height: 1.5rem;
+}
+
+.content2 > h2 {
+    padding-bottom: 1rem;
+}
+
+.content3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.content3 > span {
+    flex-shrink: 0;
+}
+
+.content3 > div {
+    flex: 1;
+}
+
+.content3 > img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover; /* La imagen llena completamente el contenedor */
+    border-radius: 20px;
+    flex-shrink: 0; /* Evita que la imagen se encoja si hay poco espacio */
+}
+
+.content4 {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
-    flex-shrink: 0;
+    gap: 0.6rem;
+}
+
+.divisor {
+    height: 2px;
+    background-color: #707070;
+}
+
+.switches {
     min-width: 40px;
-    max-width: 80px;
+    max-width: 50px;
 }
 
 .switches a {
@@ -100,16 +150,30 @@ html, body {
     height: 24px;
 }
 
+.switches {
+    min-width: 40px;
+    max-width: 50px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 80px;
+    max-width: 140px;
+    gap: 0.5rem;
+}
+
 .boton {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 0.6rem 1.2rem;
+    padding: 0.2rem 0.8rem;
     background-color: var(--cobalt);
     color: var(--btn-text-light);
-    border-radius: 6px;
+    border-radius: 20px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 100;
     font-size: 1rem;
     transition: background-color 0.2s ease;
 }
@@ -125,10 +189,9 @@ html, body {
 .boton2 {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 0.6rem 1.2rem;
-    border: 2px solid var(--cobalt);
-    border-radius: 6px;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--cobalt);
+    border-radius: 20px;
     color: var(--cobalt);
     background-color: var(--cobalt-translucent);
     text-decoration: none;
@@ -143,4 +206,91 @@ html, body {
 
 .boton2 svg {
     stroke: var(--cobalt);
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    background-color: var(--cobalt-translucent-hover2);
+    color: var(--cobalt);
+    font-weight: 600;
+    font-size: 0.95rem;
+    user-select: none;
+}
+
+.tech-badge svg {
+    flex-shrink: 0;
+}
+
+.tech-badge p {
+    margin: 0;
+}
+
+.tech-badge2 {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--cobalt-translucent-hover2);
+    color: var(--cobalt);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.tech-badge2 svg {
+    flex-shrink: 0;
+}
+
+.tech-badge3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 2rem;
+    background-color: var(--gray-translucent-hover);
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 0.75rem;
+    user-select: none;
+}
+
+.tech-badge3 svg {
+    flex-shrink: 0;
+}
+
+.tech-badge3 p {
+    margin: 0;
+}
+
+.logo {
+    display: none;
+    height: 25px;
+}
+
+.ITM {
+    max-width: 140px;
+}
+
+.ITM > img{
+    height: 120px;
+    object-fit: cover; /* La imagen llena completamente el contenedor */
+    flex-shrink: 0; /* Evita que la imagen se encoja si hay poco espacio */
+    align-items: center;
+}
+
+/* Modo claro: muestra el logo azul */
+@media (prefers-color-scheme: light) {
+    .logo-light {
+        display: inline;
+    }
+}
+
+/* Modo oscuro: muestra el logo blanco */
+@media (prefers-color-scheme: dark) {
+    .logo-dark {
+        display: inline;
+    }
 }
