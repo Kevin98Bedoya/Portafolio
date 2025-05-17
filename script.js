@@ -18,12 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     themeIcon.innerHTML = dark ? sun : moon;
   }
 
-  // Al iniciar, solo si no hay tema guardado, aplica el del sistema
   if (!html.hasAttribute('data-theme')) {
     html.setAttribute('data-theme', prefersDark() ? 'dark' : 'light');
   }
 
-  // Luego, establece el ícono correcto
   setIcon(isDark());
 
   themeToggle.addEventListener('click', (e) => {
@@ -32,4 +30,92 @@ document.addEventListener('DOMContentLoaded', () => {
     html.setAttribute('data-theme', dark ? 'light' : 'dark');
     setIcon(!dark);
   });
+
+
+
+  const languageToggle = document.getElementById('language-toggle');
+  const traducciones = {
+    es: {
+      "profesion": "Programador",
+      "sobre-mi-titulo": "Sobre mí",
+      "sobre-mi-texto": "Soy un programador que disfruta el desentrañar y convertir en soluciones funcionales los constantes retos digitales del mundo del software, con experiencia en la automatización y la inteligencia artificial. Mi interés en el hardware me proporciona una valiosa perspectiva sobre el rendimiento, las capacidades subyacentes de mis creaciones y asesorías sobre equipos.",
+      "tecnologias": "Tecnologías",
+      "experiencia": "Experiencia",
+      "experiencia-rol-1": "Practicante ingeniero en sistemas, Programador, IA",
+      "experiencia-tareas-1": "Mantenimiento de datos, IA para análisis de documentos y extracción de información con Gemini desplegada en Tigo.",
+      "experiencia-rol-2": "Asistente Administrativo y Contable",
+      "experiencia-tareas-2": "Automatización de gestión de archivos contables y reportes con Python, World Office y Excel.",
+      "experiencia-rol-3": "Practicante tecnólogo en sistemas de información, Programador, Automatizador de procesos",
+      "experiencia-tareas-3": "Automatización de pruebas de software con Selenium y Robot Framework.",
+      "proyectos": "Proyectos",
+      "proyectos-titulo-1": "Portafolio",
+      "proyectos-que-es-1": "Mi portafolio",
+      "proyectos-descripcion-1": "Página web para dar a conocer mis habilidades y experiencias como tecnólogo en sistemas y estudiante de último semeste Ingeniería de sistemas con el fin de encontrar el empleo que me permita desarrollar mis capacidades y brindar mis conocimientos al servicio de un gran equipo.",
+      "formacion": "Formación",
+      "formacion-titulo-1": "Estudiante Ingieniería en Sistemas",
+      "formacion-descripcion-1": "Mi formación en ingeniería me proporcionó conocimientos avanzados en áreas como compiladores, inteligencia artificial y visión artificial. Además, desarrollé una comprensión profunda de la arquitectura de computadores, sistemas operativos y la administración de bases de datos.",
+      "formacion-titulo-2": "Título Tecnología en Sistemas de Información",
+      "formacion-descripcion-2": "Desarrollé habilidades sólidas en lógica de programación, POO con Java, estructuras de datos esenciales, gestión de archivos .txt y bases de datos SQL Server. Mi experiencia abarca el desarrollo de software profesional con C# y la creación de aplicaciones web con JSP y PHP, además de conocimientos en inteligencia de negocios con visual studio y power BI."
+    },
+    en: {
+      "profesion": "Programmer",
+      "sobre-mi-titulo": "About me",
+      "sobre-mi-texto": "I am a programmer who enjoys unraveling and turning the constant digital challenges of the software world into functional solutions, with experience in automation and artificial intelligence. My interest in hardware provides me with a valuable perspective on the performance and underlying capabilities of my creations and equipment advice.",
+      "tecnologias": "Technologies",
+      "experiencia": "Experience",
+      "experiencia-rol-1": "Systems Engineering Intern, Programmer, AI",
+      "experiencia-tareas-1": "Data maintenance, AI for document analysis and information extraction with Gemini deployed at Tigo.",
+      "experiencia-rol-2": "Administrative and Accounting Assistant",
+      "experiencia-tareas-2": "Automation of accounting file management and reports with Python, World Office, and Excel.",
+      "experiencia-rol-3": "Information Systems Technology Intern, Programmer, Process Automation",
+      "experiencia-tareas-3": "Software test automation with Selenium and Robot Framework.",
+      "proyectos": "Projects",
+      "proyectos-titulo-1": "Portfolio",
+      "proyectos-que-es-1": "My portfolio",
+      "proyectos-descripcion-1": "Website to showcase my skills and experiences as a technologist in systems and a final semester student of Systems Engineering, with the aim of finding employment that allows me to develop my capabilities and offer my knowledge to a great team.",
+      "formacion": "Education",
+      "formacion-titulo-1": "Systems Engineering Student",
+      "formacion-descripcion-1": "My engineering education provided me with advanced knowledge in areas such as compilers, artificial intelligence, and computer vision. Additionally, I developed a deep understanding of computer architecture, operating systems, and database administration.",
+      "formacion-titulo-2": "Information Systems Technology Degree",
+      "formacion-descripcion-2": "I developed solid skills in programming logic, OOP with Java, essential data structures, .txt file management, and SQL Server databases. My experience includes professional software development with C# and the creation of web applications with JSP and PHP, in addition to knowledge in business intelligence with Visual Studio and Power BI."
+    }
+  };
+
+  let idiomaActual = 'es';
+
+  function cambiarIdioma() {
+    idiomaActual = idiomaActual === 'es' ? 'en' : 'es';
+    actualizarTextos();
+  }
+
+  function actualizarTextos() {
+    document.getElementById('profesion').textContent = traducciones[idiomaActual].profesion;
+    document.getElementById('sobre-mi-titulo').textContent = traducciones[idiomaActual]['sobre-mi-titulo'];
+    document.getElementById('sobre-mi-texto').textContent = traducciones[idiomaActual]['sobre-mi-texto'];
+    document.getElementById('tecnologias').textContent = traducciones[idiomaActual].tecnologias;
+    document.getElementById('experiencia').textContent = traducciones[idiomaActual].experiencia;
+    document.getElementById('experiencia-rol-1').textContent = traducciones[idiomaActual]['experiencia-rol-1'];
+    document.getElementById('experiencia-tareas-1').textContent = traducciones[idiomaActual]['experiencia-tareas-1'];
+    document.getElementById('experiencia-rol-2').textContent = traducciones[idiomaActual]['experiencia-rol-2'];
+    document.getElementById('experiencia-tareas-2').textContent = traducciones[idiomaActual]['experiencia-tareas-2'];
+    document.getElementById('experiencia-rol-3').textContent = traducciones[idiomaActual]['experiencia-rol-3'];
+    document.getElementById('experiencia-tareas-3').textContent = traducciones[idiomaActual]['experiencia-tareas-3'];
+    document.getElementById('proyectos').textContent = traducciones[idiomaActual].proyectos;
+    document.getElementById('proyectos-titulo-1').textContent = traducciones[idiomaActual]['proyectos-titulo-1'];
+    document.getElementById('proyectos-que-es-1').textContent = traducciones[idiomaActual]['proyectos-que-es-1'];
+    document.getElementById('proyectos-descripcion-1').textContent = traducciones[idiomaActual]['proyectos-descripcion-1'];
+    document.getElementById('formacion').textContent = traducciones[idiomaActual].formacion;
+    document.getElementById('formacion-titulo-1').textContent = traducciones[idiomaActual]['formacion-titulo-1'];
+    document.getElementById('formacion-descripcion-1').textContent = traducciones[idiomaActual]['formacion-descripcion-1'];
+    document.getElementById('formacion-titulo-2').textContent = traducciones[idiomaActual]['formacion-titulo-2'];
+    document.getElementById('formacion-descripcion-2').textContent = traducciones[idiomaActual]['formacion-descripcion-2'];
+  }
+
+  // Evento de clic para el botón de idioma
+  languageToggle.addEventListener('click', (event) => {
+    event.preventDefault(); // Evita que el enlace navegue a '#'
+    cambiarIdioma();
+  });
+
+  actualizarTextos();
 });

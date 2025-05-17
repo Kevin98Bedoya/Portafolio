@@ -60,14 +60,13 @@ html, body {
 }
 
 .inner-padding {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     padding-top: 55px;
     padding-left: 35px;
     padding-right: 35px;
     padding-bottom: 55px;
-}
-
-.inner-padding > div{
-    padding-top: 2rem;
 }
 
 .content {
@@ -99,6 +98,7 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -238,6 +238,7 @@ html, body {
     color: var(--cobalt);
     font-weight: 600;
     font-size: 0.75rem;
+    user-select: none;
 }
 
 .tech-badge2 svg {
@@ -265,32 +266,33 @@ html, body {
     margin: 0;
 }
 
-.logo {
-    display: none;
-    height: 25px;
-}
-
 .ITM {
     max-width: 140px;
 }
 
 .ITM > img{
-    height: 120px;
-    object-fit: cover; /* La imagen llena completamente el contenedor */
-    flex-shrink: 0; /* Evita que la imagen se encoja si hay poco espacio */
     align-items: center;
 }
 
-/* Modo claro: muestra el logo azul */
-@media (prefers-color-scheme: light) {
-    .logo-light {
-        display: inline;
-    }
+.ITM .logo-light {
+    display: inline;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.ITM .logo-dark {
+    display: none;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
-/* Modo oscuro: muestra el logo blanco */
-@media (prefers-color-scheme: dark) {
-    .logo-dark {
-        display: inline;
-    }
+/* Cuando el TEMA OSCURO está activo (html[data-theme='dark']): */
+/* Oculta el logo claro y muestra el logo oscuro. */
+html[data-theme='dark'] .ITM .logo-light {
+    display: none;
+}
+
+html[data-theme='dark'] .ITM .logo-dark {
+    display: inline;
 }
