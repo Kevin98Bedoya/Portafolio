@@ -116,6 +116,7 @@ html, body {
     object-fit: cover; /* La imagen llena completamente el contenedor */
     border-radius: 20px;
     flex-shrink: 0; /* Evita que la imagen se encoja si hay poco espacio */
+    border: 1px solid var(--gray-translucent-hover);
 }
 
 .content4 {
