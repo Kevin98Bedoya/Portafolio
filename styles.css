@@ -125,6 +125,31 @@ html, body {
     gap: 0.6rem;
 }
 
+.extra {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-translucent-hover);
+    border-radius: 10px;
+    gap: 0.3rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--gray-translucent-hover);
+}
+
+.extra > img {
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.extra > strong{
+    padding-left: 0.75rem;
+    color: var(--cobalt);
+}
+
+.extra > p {
+    padding-left: 0.75rem;
+}
+
 .divisor {
     height: 2px;
     background-color: #707070;

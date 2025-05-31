@@ -51,11 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
       "proyectos-titulo-1": "Portafolio",
       "proyectos-que-es-1": "Mi portafolio",
       "proyectos-descripcion-1": "Página web para dar a conocer mis habilidades y experiencias como tecnólogo en sistemas y estudiante de último semeste Ingeniería de sistemas con el fin de encontrar el empleo que me permita desarrollar mis capacidades y brindar mis conocimientos al servicio de un gran equipo.",
+      "proyectos-titulo-2": "Proyecto Nutresa",
+      "proyectos-que-es-2": "Automatización Camaleom",
+      "proyectos-descripcion-2": "Ejemplo muy básico sobre el método de automatización de procesos en mi estadía como practicante de tecnólogo en sistemas en la empresa Nutresa S.A..",
       "formacion": "Formación",
       "formacion-titulo-1": "Estudiante Ingieniería en Sistemas",
       "formacion-descripcion-1": "Mi formación en ingeniería me proporcionó conocimientos avanzados en áreas como compiladores, inteligencia artificial y visión artificial. Además, desarrollé una comprensión profunda de la arquitectura de computadores, sistemas operativos y la administración de bases de datos.",
       "formacion-titulo-2": "Título Tecnología en Sistemas de Información",
-      "formacion-descripcion-2": "Desarrollé habilidades sólidas en lógica de programación, POO con Java, estructuras de datos esenciales, gestión de archivos .txt y bases de datos SQL Server. Mi experiencia abarca el desarrollo de software profesional con C# y la creación de aplicaciones web con JSP y PHP, además de conocimientos en inteligencia de negocios con visual studio y power BI."
+      "formacion-descripcion-2": "Desarrollé habilidades sólidas en lógica de programación, POO con Java, estructuras de datos esenciales, gestión de archivos .txt y bases de datos SQL Server. Mi experiencia abarca el desarrollo de software profesional con C# y la creación de aplicaciones web con JSP y PHP, además de conocimientos en inteligencia de negocios con visual studio y power BI.",
+      "extra": "Extra",
+      "extra-titulo-1": "Hardware",
+      "extra-que-es-1": "Experiencia en planificación y montaje de infraestructura de hardware."
     },
     en: {
       "profesion": "Programmer",
@@ -73,11 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
       "proyectos-titulo-1": "Portfolio",
       "proyectos-que-es-1": "My portfolio",
       "proyectos-descripcion-1": "Website to showcase my skills and experiences as a technologist in systems and a final semester student of Systems Engineering, with the aim of finding employment that allows me to develop my capabilities and offer my knowledge to a great team.",
+      "proyectos-titulo-2": "Nutresa Proyect",
+      "proyectos-que-es-2": "Camaleom Automation",
+      "proyectos-descripcion-2": "A very basic example of the process automation method during my time as a systems technologist intern at Nutresa S.A..",
       "formacion": "Education",
       "formacion-titulo-1": "Systems Engineering Student",
       "formacion-descripcion-1": "My engineering education provided me with advanced knowledge in areas such as compilers, artificial intelligence, and computer vision. Additionally, I developed a deep understanding of computer architecture, operating systems, and database administration.",
       "formacion-titulo-2": "Information Systems Technology Degree",
-      "formacion-descripcion-2": "I developed solid skills in programming logic, OOP with Java, essential data structures, .txt file management, and SQL Server databases. My experience includes professional software development with C# and the creation of web applications with JSP and PHP, in addition to knowledge in business intelligence with Visual Studio and Power BI."
+      "formacion-descripcion-2": "I developed solid skills in programming logic, OOP with Java, essential data structures, .txt file management, and SQL Server databases. My experience includes professional software development with C# and the creation of web applications with JSP and PHP, in addition to knowledge in business intelligence with Visual Studio and Power BI.",
+      "extra": "Extra",
+      "extra-titulo-1": "Hardware",
+      "extra-que-es-1": "Experience in planning and assembling hardware infrastructure."
     }
   };
 
@@ -104,11 +116,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('proyectos-titulo-1').textContent = traducciones[idiomaActual]['proyectos-titulo-1'];
     document.getElementById('proyectos-que-es-1').textContent = traducciones[idiomaActual]['proyectos-que-es-1'];
     document.getElementById('proyectos-descripcion-1').textContent = traducciones[idiomaActual]['proyectos-descripcion-1'];
+    document.getElementById('proyectos-titulo-2').textContent = traducciones[idiomaActual]['proyectos-titulo-2'];
+    document.getElementById('proyectos-que-es-2').textContent = traducciones[idiomaActual]['proyectos-que-es-2'];
+    document.getElementById('proyectos-descripcion-2').textContent = traducciones[idiomaActual]['proyectos-descripcion-2'];
     document.getElementById('formacion').textContent = traducciones[idiomaActual].formacion;
     document.getElementById('formacion-titulo-1').textContent = traducciones[idiomaActual]['formacion-titulo-1'];
     document.getElementById('formacion-descripcion-1').textContent = traducciones[idiomaActual]['formacion-descripcion-1'];
     document.getElementById('formacion-titulo-2').textContent = traducciones[idiomaActual]['formacion-titulo-2'];
     document.getElementById('formacion-descripcion-2').textContent = traducciones[idiomaActual]['formacion-descripcion-2'];
+    document.getElementById('extra').textContent = traducciones[idiomaActual]['extra'];
+    document.getElementById('extra-titulo-1').textContent = traducciones[idiomaActual]['extra-titulo-1'];
+    document.getElementById('extra-que-es-1').textContent = traducciones[idiomaActual]['extra-que-es-1'];
   }
 
   // Evento de clic para el botón de idioma
