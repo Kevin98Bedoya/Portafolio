@@ -48,12 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
       "experiencia-rol-3": "Practicante tecnólogo en sistemas de información, Programador, Automatizador de procesos",
       "experiencia-tareas-3": "Automatización de pruebas de software con Selenium y Robot Framework.",
       "proyectos": "Proyectos",
-      "proyectos-titulo-1": "Portafolio",
-      "proyectos-que-es-1": "Mi portafolio",
-      "proyectos-descripcion-1": "Página web para dar a conocer mis habilidades y experiencias como tecnólogo en sistemas y estudiante de último semeste Ingeniería de sistemas con el fin de encontrar el empleo que me permita desarrollar mis capacidades y brindar mis conocimientos al servicio de un gran equipo.",
-      "proyectos-titulo-2": "Proyecto Nutresa",
-      "proyectos-que-es-2": "Automatización Camaleom",
-      "proyectos-descripcion-2": "Ejemplo muy básico sobre el método de automatización de procesos en mi estadía como practicante de tecnólogo en sistemas en la empresa Nutresa S.A..",
+      "proyectos-titulo-3": "Proyecto Tigo 2",
+      "proyectos-que-es-3": "Validador de archivos",
+      "proyectos-descripcion-3": "Ejemplo sobre el método de validación cronológica de las imagenes de un archivo excel en mi estadía como prácticante ingeniero en sistemas en la empresa UNE EPM Telecomunicaciones S.A E.S.P..",
+      "proyectos-titulo-2": "Proyecto Tigo",
+      "proyectos-que-es-2": "Extractor de información con IA",
+      "proyectos-descripcion-2": "Ejemplo sobre el método de extracción y procesamiento de información de un archivo word en mi estadía como prácticante ingeniero en sistemas en la empresa UNE EPM Telecomunicaciones S.A E.S.P..",
+      "proyectos-titulo-1": "Proyecto Nutresa",
+      "proyectos-que-es-1": "Automatización Camaleom",
+      "proyectos-descripcion-1": "Ejemplo sobre el método de automatización de procesos en mi estadía como practicante tecnólogo en sistemas de información en la empresa Nutresa S.A..",
       "formacion": "Formación",
       "formacion-titulo-1": "Estudiante Ingieniería en Sistemas",
       "formacion-descripcion-1": "Mi formación en ingeniería me proporcionó conocimientos avanzados en áreas como compiladores, inteligencia artificial y visión artificial. Además, desarrollé una comprensión profunda de la arquitectura de computadores, sistemas operativos y la administración de bases de datos.",
@@ -76,12 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
       "experiencia-rol-3": "Information Systems Technology Intern, Programmer, Process Automation",
       "experiencia-tareas-3": "Software test automation with Selenium and Robot Framework.",
       "proyectos": "Projects",
-      "proyectos-titulo-1": "Portfolio",
-      "proyectos-que-es-1": "My portfolio",
-      "proyectos-descripcion-1": "Website to showcase my skills and experiences as a technologist in systems and a final semester student of Systems Engineering, with the aim of finding employment that allows me to develop my capabilities and offer my knowledge to a great team.",
-      "proyectos-titulo-2": "Nutresa Proyect",
-      "proyectos-que-es-2": "Camaleom Automation",
-      "proyectos-descripcion-2": "A very basic example of the process automation method during my time as a systems technologist intern at Nutresa S.A..",
+      "proyectos-titulo-3": "Tigo Proyect 2",
+      "proyectos-que-es-3": "File validator",
+      "proyectos-descripcion-3": "Example of the chronological validation method for images in an Excel file during my time as a systems engineering intern at UNE EPM Telecomunicaciones S.A. E.S.P..",
+      "proyectos-titulo-2": "Tigo Proyect",
+      "proyectos-que-es-2": "AI-powered information extractor",
+      "proyectos-descripcion-2": "Example of the method of extracting and processing information from a Word file during my stay as a systems engineering intern at UNE EPM Telecomunicaciones S.A. E.S.P..",
+      "proyectos-titulo-1": "Nutresa Proyect",
+      "proyectos-que-es-1": "Camaleom Automation",
+      "proyectos-descripcion-1": "A example of the process automation method during my time as a systems technologist intern at Nutresa S.A..",
       "formacion": "Education",
       "formacion-titulo-1": "Systems Engineering Student",
       "formacion-descripcion-1": "My engineering education provided me with advanced knowledge in areas such as compilers, artificial intelligence, and computer vision. Additionally, I developed a deep understanding of computer architecture, operating systems, and database administration.",
@@ -119,6 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('proyectos-titulo-2').textContent = traducciones[idiomaActual]['proyectos-titulo-2'];
     document.getElementById('proyectos-que-es-2').textContent = traducciones[idiomaActual]['proyectos-que-es-2'];
     document.getElementById('proyectos-descripcion-2').textContent = traducciones[idiomaActual]['proyectos-descripcion-2'];
+    document.getElementById('proyectos-titulo-3').textContent = traducciones[idiomaActual]['proyectos-titulo-3'];
+    document.getElementById('proyectos-que-es-3').textContent = traducciones[idiomaActual]['proyectos-que-es-3'];
+    document.getElementById('proyectos-descripcion-3').textContent = traducciones[idiomaActual]['proyectos-descripcion-3'];
     document.getElementById('formacion').textContent = traducciones[idiomaActual].formacion;
     document.getElementById('formacion-titulo-1').textContent = traducciones[idiomaActual]['formacion-titulo-1'];
     document.getElementById('formacion-descripcion-1').textContent = traducciones[idiomaActual]['formacion-descripcion-1'];
